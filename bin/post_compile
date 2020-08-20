@@ -1,0 +1,2 @@
+echo "-----> Running post-compile hook: sayge-ai collectstatic"
+PYTHONPATH=$PWD:$PWD/server:$PYTHONPATH DJANGO_SETTINGS_MODULE=sayge_ai.settings SECRET_KEY='SECRET_KEY' SENTRY_DSN='' django-admin collectstatic --no-input

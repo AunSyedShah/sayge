@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% load render_bundle from webpack_loader %}
+
+{% block extracss %}
+ {{ block.super }}
+ {% render_bundle 'vendors' 'css' %}
+ {% render_bundle 'main' 'css' %}
+ {% render_bundle 'runtime-main' 'css' %}
+{% endblock %}
+{% block content %}
+<div id="root"></div>
+{% endblock %}
+{% block scripts %}
+ {{ block.super }}
+ {% render_bundle 'vendors' 'js' %}
+ {% render_bundle 'main' 'js' %}
+ {% render_bundle 'runtime-main' 'js' %}
+{% endblock %}

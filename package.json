@@ -1,0 +1,10 @@
+{
+  "name": "sayge-ai",
+  "version": "0.0.1",
+  "scripts": {
+    "postinstall": "(cd client && yarn install && yarn build)"
+  },
+  "repository": "git@github.com:sayge-ai/sayge-ai.git",
+  "author": "Aljosa Mohorovic <aljosa.mohorovic@toptal.com>",
+  "license": "MIT"
+}
